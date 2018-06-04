@@ -1,0 +1,5 @@
+data <- read.csv("gyro.csv")
+library(caTools)
+split <- sample.split(data ,splitRatio=0.8)
+training <- subset(data ,split=="TRUE") 
+testing <- subset(data ,split="FALSE")

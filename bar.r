@@ -1,0 +1,11 @@
+setwd("F:")
+m <- c("july","aug","sep","oct","dec")
+r<- c("east","west","north")
+colo <- c("green","orange","brown")
+mat1<- matrix(c(2,9,3,11,9,4,8,7,3,12,5,2,8,10,11)
+             ,nrow = 3,ncol = 5,byrow = TRUE)
+png(file="barchat1.jpg")
+barplot(mat1,names.arg = m,xlab ="month",ylab="revenue"
+        ,col=colo,main="revenue chart",border="red")
+legend("topleft",r,cex=1.1,fill=colo)
+dev.off()
